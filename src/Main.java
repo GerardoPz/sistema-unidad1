@@ -1,6 +1,7 @@
 import javax.swing.*;
 
 public class Main {
+    // COMENTARIO PRUEBA
     static String[] opciones = {"Agregar Asociado", "Asignar Cargo", "Registrar Pago Asociado", "Imprimir Lista Asociados Directivos", "Imprimir Lista Asociados Naturales", "SALIR"};
 
     static void run() {
