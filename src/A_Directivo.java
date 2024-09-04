@@ -9,7 +9,7 @@ public class A_Directivo extends Asociado{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public A_Directivo(int nsocio, String nombre, int fingreso, int ntel, String tipo) {
+	public A_Directivo(int numeroSocio, String nombre, int fechaIngreso, int numeroTelefono, String tipoAsociado) {
 		super(nsocio, nombre, fingreso, ntel, tipo);
 		// TODO Auto-generated constructor stub
 		this.puesto=puesto;
@@ -27,12 +27,6 @@ public class A_Directivo extends Asociado{
 	
 	public void setFposecion(String fposecion) {
 		Fposecion = fposecion;
-	}
-	
-	@Override
-	public String toString() {
-		return "A_Directivo [puesto=" + puesto + ", cargo=" + cargo + ", Fposecion=" + Fposecion + ", toString()="
-				+ super.toString() + "]";
 	}
 	
 }
