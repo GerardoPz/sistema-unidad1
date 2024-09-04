@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Main {
     // COMENTARIO PRUEBA
-    static String[] opciones = {"Agregar Asociado", "Asignar Cargo", "Registrar Pago Asociado", "Imprimir Lista Asociados Directivos", "Imprimir Lista Asociados Naturales", "SALIR"};
+    static String[] opciones = {"Agregar clasesAbs.Asociado", "Asignar Cargo", "Registrar Pago clasesAbs.Asociado", "Imprimir Lista Asociados Directivos", "Imprimir Lista Asociados Naturales", "SALIR"};
 
     static void run() {
         String opcion;

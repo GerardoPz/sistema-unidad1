@@ -1,3 +1,5 @@
+package clasesAbs;
+
 import java.util.Date;
 
 public class Asociado {
@@ -6,6 +8,10 @@ public class Asociado {
     private Date fechaIngreso;
     private int numeroTelefono;
     private String tipoAsociado;
+
+    public Asociado() {
+
+    }
 
     public Asociado(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado) {
         this.numeroSocio = numeroSocio;
