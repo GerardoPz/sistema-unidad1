@@ -6,8 +6,9 @@ import javax.swing.*;
 import java.util.Date;
 
 public class MyApp {
-    // Arreglo de OBJETOS
-    static Object[] asociados = {
+    // Arreglo de Asociados Directivos y Naaturles PRUEBA
+    static Object[] asociados = new Object[10];
+            /*{
             new A_Directivo(1, "Nombre 1", new Date(95, 5, 15), 123, "Asociado 1", "Puesto 1", "GGG", ""),
             new A_Directivo(2, "Nombre 2", new Date(95, 5, 15), 123, "Asociado 2", "Puesto 2", "GGG", ""),
             new A_Directivo(3, "Nombre 3", new Date(95, 5, 15), 123, "Asociado 3", "Puesto 3", "GGG", ""),
@@ -19,7 +20,9 @@ public class MyApp {
             new A_Directivo(3, "Nombre 5", new Date(95, 5, 15), 123, "Asociado 3", "Puesto 3", "GGG", ""),
             new Asociado(0, "String 4", new Date(98, 11, 2), 123, "String tipoAsociado"),
             new Asociado(0, "String 5", new Date(98, 11, 2), 123, "String tipoAsociado"),
-    };
+    };*/
+
+
 
     static void listadoDatosAsociadosDirectivos() {
         StringBuilder sb = new StringBuilder();
@@ -30,5 +33,16 @@ public class MyApp {
         }
 
         JOptionPane.showMessageDialog(null, sb.toString(), "Listado de Asociados Directivo", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    static void listadoAsociadosNaturales() {
+        StringBuilder sb = new StringBuilder();
+        for(int i=0; i<asociados.length; i++) {
+            if (asociados[i].getClass() == Asociado.class) {
+                sb.append(asociados[i].toString()).append("\n");
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, sb.toString(), "Listado de Asociados Naturales", JOptionPane.INFORMATION_MESSAGE);
     }
 }

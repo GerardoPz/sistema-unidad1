@@ -16,6 +16,9 @@ public class Main {
                 case "Imprimir Lista Asociados Directivos":
                     MyApp.listadoDatosAsociadosDirectivos();
                             break;
+                case "Imprimir Lista Asociados Naturales":
+                    MyApp.listadoAsociadosNaturales();
+                    break;
                 default:
                     TJOption.imprimePantalla("Aun no jala esta madre");
             }
