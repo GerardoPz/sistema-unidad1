@@ -60,4 +60,15 @@ public class Asociado {
     public void setTipoAsociado(String tipoAsociado) {
         this.tipoAsociado = tipoAsociado;
     }
+
+    @Override
+    public String toString() {
+        return "Asociado{" +
+                "numeroSocio=" + numeroSocio +
+                ", nombre='" + nombre + '\'' +
+                ", fechaIngreso=" + fechaIngreso +
+                ", numeroTelefono=" + numeroTelefono +
+                ", tipoAsociado='" + tipoAsociado + '\'' +
+                '}';
+    }
 }
