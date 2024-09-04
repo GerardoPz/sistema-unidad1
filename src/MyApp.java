@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class MyApp {
     // Arreglo de Asociados Directivos y Naaturles PRUEBA
+    // PRUEBA
     static Object[] asociados = new Object[10];
             /*{
             new A_Directivo(1, "Nombre 1", new Date(95, 5, 15), 123, "Asociado 1", "Puesto 1", "GGG", ""),
@@ -32,7 +33,7 @@ public class MyApp {
             }
         }
 
-        JOptionPane.showMessageDialog(null, sb.toString(), "Listado de Asociados Directivo", JOptionPane.INFORMATION_MESSAGE);
+        TJOption.imprimePantalla(sb.toString());
     }
 
     static void listadoAsociadosNaturales() {
@@ -43,6 +44,7 @@ public class MyApp {
             }
         }
 
+        //TJOption.imprimePantalla(sb.toString());
         JOptionPane.showMessageDialog(null, sb.toString(), "Listado de Asociados Naturales", JOptionPane.INFORMATION_MESSAGE);
     }
 }
