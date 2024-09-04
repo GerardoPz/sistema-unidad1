@@ -5,7 +5,7 @@ public class Asociado {
     private String nombre;
     private Date fechaIngreso;
     private int numeroTelefono;
-    String tipoAsociado;
+    private String tipoAsociado;
 
     public Asociado(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado) {
         this.numeroSocio = numeroSocio;
