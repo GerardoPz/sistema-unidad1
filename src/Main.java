@@ -1,3 +1,5 @@
+import clasesAbs.A_Directivo;
+import clasesAbs.Asociado;
 import clasesAbs.TJOption;
 
 import javax.swing.*;
@@ -14,10 +16,10 @@ public class Main {
             opcion = (String) JOptionPane.showInputDialog(null, "Seleccione una opcion", "Sistema Unidad 1", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
             switch (opcion) {
                 case "Imprimir Lista Asociados Directivos":
-                    MyApp.listadoDatosAsociadosDirectivos();
+                    MyApp.listarDatosFiltrados(A_Directivo.class);
                             break;
                 case "Imprimir Lista Asociados Naturales":
-                    MyApp.listadoAsociadosNaturales();
+                    MyApp.listarDatosFiltrados(Asociado.class);
                     break;
                 default:
                     TJOption.imprimePantalla("Aun no jala esta madre");
@@ -26,6 +28,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        run();
+       run();
     }
 }
