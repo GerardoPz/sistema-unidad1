@@ -1,3 +1,5 @@
+package clasesAbs;
+
 import java.util.Date;
 
 public class A_Natural extends Asociado{
