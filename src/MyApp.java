@@ -1,9 +1,7 @@
 import clasesAbs.A_Directivo;
 import clasesAbs.A_Natural;
-import clasesAbs.Asociado;
 import clasesAbs.TJOption;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Date;
 
