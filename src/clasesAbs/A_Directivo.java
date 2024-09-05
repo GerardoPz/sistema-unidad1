@@ -44,6 +44,6 @@ public class A_Directivo extends Asociado{
 
 	@Override
 	public String toString() {
-		return super.toString() + ", Cargo: " + cargo + ", Fecha de Toma de Posesión: " + fechaPosecion;
+		return super.toString() + ", Cargo: " + cargo + ", Fecha: " + fechaPosecion;
 	}
 }
