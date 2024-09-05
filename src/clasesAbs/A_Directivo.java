@@ -10,8 +10,8 @@ public class A_Directivo extends Asociado{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public A_Directivo(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado, String cargo, Date fechaPosecion) {
-		super(numeroSocio, nombre, fechaIngreso,  numeroTelefono,  tipoAsociado);
+	public A_Directivo(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String cargo, Date fechaPosecion) {
+		super(numeroSocio, nombre, fechaIngreso,  numeroTelefono);
 		// TODO Auto-generated constructor stub
 		this.cargo=cargo;
 		this.fechaPosecion=fechaPosecion;
@@ -21,8 +21,8 @@ public class A_Directivo extends Asociado{
 		this.cargo = cargo;
 	}
 	
-	public void setFechaPosecion(Date fechaPosecion) {
-		fechaPosecion = fechaPosecion;
+	public void setFechaPosecion(Date val) {
+		fechaPosecion = val;
 	}
 
 	public String getCargo(){
