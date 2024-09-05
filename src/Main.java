@@ -1,3 +1,5 @@
+import clasesAbs.TJOption;
+
 import javax.swing.*;
 
 public class Main {
@@ -10,6 +12,16 @@ public class Main {
         String opcion;
         do {
             opcion = (String) JOptionPane.showInputDialog(null, "Seleccione una opcion", "Sistema Unidad 1", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+            switch (opcion) {
+                case "Imprimir Lista Asociados Directivos":
+                    MyApp.listadoDatosAsociadosDirectivos();
+                            break;
+                case "Imprimir Lista Asociados Naturales":
+                    MyApp.listadoAsociadosNaturales();
+                    break;
+                default:
+                    TJOption.imprimePantalla("Aun no jala esta madre");
+            }
         } while(!opcion.equals("SALIR"));
     }
 
