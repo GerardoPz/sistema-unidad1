@@ -1,6 +1,7 @@
 import clasesAbs.A_Directivo;
 import clasesAbs.Asociado;
 import clasesAbs.TJOption;
+import clasesAbs.A_Natural;
 
 import javax.swing.*;
 import java.util.Date;
