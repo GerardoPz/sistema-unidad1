@@ -23,8 +23,12 @@ public class Main {
                     String listaDirectivos = app.imprimirDirectivos();  // Obtener la lista de directivos
                     TJOption.imprimePantalla(listaDirectivos);
                     break;
+                case "Agregar asociado natural":
+                    app.agregarAsociadoNatural();
+                    break;
                 case "Imprimir Lista Asociados Naturales":
-                    //app.imprimirNaturales();
+                    String listaNaturales = app.imprimirNatural();  // Obtener la lista de naturales
+                    TJOption.imprimePantalla(listaNaturales);
                     break;
                 default:
                     TJOption.imprimePantalla("HASTA LUEGO");

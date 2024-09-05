@@ -55,4 +55,26 @@ public class MyApp {
         }
         return sb.toString();
     }
+
+    public void agregarAsociadoNatural() {
+        A_Natural asociado = new A_Natural();
+        asociado.setNumeroSocio(TJOption.leerInt("Numero Socio"));
+        asociado.setNombre(TJOption.leerString("Ingresa el nombre"));
+        asociado.setFechaIngreso(new Date());
+        asociado.setNumeroTelefono(TJOption.leerInt("Numero Telefono"));
+        asociado.setTipoAsociado(TJOption.leerString("Tipo Asociado"));
+        asociado.setCantAport(TJOption.leerInt("Monto de Aportaciones"));
+        asociado.setFecUltimaAport(new Date());
+
+        naturales.add(asociado);  // Agrega el asociado natural a la lista
+        TJOption.imprimePantalla("Asociado natural agregado con éxito.");
+    }
+
+    public String imprimirNatural() {
+        StringBuilder sb = new StringBuilder("Listado de Asociados Naturales:\n");
+        for (A_Natural natural : naturales) {
+            sb.append(natural).append("\n");
+        }
+        return sb.toString();
+    }
 }
