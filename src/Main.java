@@ -6,23 +6,28 @@ import javax.swing.*;
 
 public class Main {
     // COMENTARIO PRUEBA
-    static String[] opciones = {"Agregar clasesAbs.Asociado", "Asignar Cargo", "Registrar Pago clasesAbs.Asociado", "Imprimir Lista Asociados Directivos", "Imprimir Lista Asociados Naturales", "SALIR"};
+    static String[] opciones = {"Agregar asociado directivo", "Agregar asociado natural", "Imprimir Lista Asociados Directivos", "Imprimir Lista Asociados Naturales", "SALIR"};
 
 
 
     static void run() {
         String opcion;
+        MyApp app = new MyApp();
         do {
             opcion = (String) JOptionPane.showInputDialog(null, "Seleccione una opcion", "Sistema Unidad 1", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
             switch (opcion) {
+                case "Agregar asociado directivo":
+                    app.agregarAsociadoDirectivo();
+                    break;
                 case "Imprimir Lista Asociados Directivos":
-                    MyApp.listarDatosFiltrados(A_Directivo.class);
-                            break;
+                    String listaDirectivos = app.imprimirDirectivos();  // Obtener la lista de directivos
+                    TJOption.imprimePantalla(listaDirectivos);
+                    break;
                 case "Imprimir Lista Asociados Naturales":
-                    MyApp.listarDatosFiltrados(Asociado.class);
+                    //app.imprimirNaturales();
                     break;
                 default:
-                    TJOption.imprimePantalla("Aun no jala esta madre");
+                    TJOption.imprimePantalla("HASTA LUEGO");
 
             }
         } while(!opcion.equals("SALIR"));
