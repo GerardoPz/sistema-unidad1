@@ -6,10 +6,8 @@ import javax.swing.*;
 import java.util.Date;
 
 public class MyApp {
-    // Arreglo de Asociados Directivos y Naaturles PRUEBA
-    // PRUEBA
-    static Object[] asociados = // new Object[10];
-            {
+    static Object[] asociados = new Object[10];
+            /*{
             new A_Directivo(1, "Nombre 1", new Date(95, 5, 15), 123, "Asociado 1", "Puesto 1", "GGG", ""),
             new A_Directivo(2, "Nombre 2", new Date(95, 5, 15), 123, "Asociado 2", "Puesto 2", "GGG", ""),
             new A_Directivo(3, "Nombre 3", new Date(95, 5, 15), 123, "Asociado 3", "Puesto 3", "GGG", ""),
@@ -21,18 +19,24 @@ public class MyApp {
             new A_Directivo(3, "Nombre 5", new Date(95, 5, 15), 123, "Asociado 3", "Puesto 3", "GGG", ""),
             new Asociado(0, "String 4", new Date(98, 11, 2), 123, "String tipoAsociado"),
             new Asociado(0, "String 5", new Date(98, 11, 2), 123, "String tipoAsociado"),
-    };
+    };*/
 
     static void listarDatosFiltrados(Class<?> claseRequerida) {
         StringBuilder stringBuilder = new StringBuilder();
 
-        for(int i=0; i<asociados.length; i++) {
-            if(asociados[i].getClass() == claseRequerida) {
-                stringBuilder.append(asociados[i].toString()).append("\n");
+        try {
+            for(int i=0; i<asociados.length; i++) {
+                if(asociados[i].getClass() == claseRequerida) {
+                    stringBuilder.append(asociados[i].toString()).append("\n");
+                }
             }
+        } catch (Exception e) {
+            TJOption.imprimePantalla("NO HAY NADA");
+            TJOption.imprimePantalla(e.toString());
+            return;
         }
 
-        JOptionPane.showMessageDialog(null, stringBuilder.toString(), "Listado de Asociados", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, stringBuilder.toString(), "Listado", JOptionPane.INFORMATION_MESSAGE);
     }
 
 

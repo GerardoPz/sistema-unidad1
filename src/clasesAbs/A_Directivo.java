@@ -30,13 +30,4 @@ public class A_Directivo extends Asociado{
 	public void setFechaPosecion(String fechaPosecion) {
 		fechaPosecion = fechaPosecion;
 	}
-
-	@Override
-	public String toString() {
-		return "A_Directivo{" +
-				"puesto='" + puesto + '\'' +
-				", cargo='" + cargo + '\'' +
-				", fechaPosecion='" + fechaPosecion + '\'' +
-				'}';
-	}
 }
