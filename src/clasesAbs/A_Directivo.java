@@ -5,13 +5,13 @@ import java.util.Date;
 public class A_Directivo extends Asociado{
 	private String puesto;
 	private String cargo;
-	private String fechaPosecion;
+	private Date fechaPosecion;
 	
 	public A_Directivo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public A_Directivo(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado, String puesto, String cargo, String fechaPosecion) {
+	public A_Directivo(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado, String puesto, String cargo, Date fechaPosecion) {
 		super(numeroSocio, nombre, fechaIngreso,  numeroTelefono,  tipoAsociado);
 		// TODO Auto-generated constructor stub
 		this.puesto=puesto;
@@ -27,8 +27,19 @@ public class A_Directivo extends Asociado{
 		this.cargo = cargo;
 	}
 	
-	public void setFechaPosecion(String fechaPosecion) {
+	public void setFechaPosecion(Date fechaPosecion) {
 		fechaPosecion = fechaPosecion;
+	}
+
+	public String getPuesto() {
+		return puesto;
+	}
+
+	public String getCargo(){
+		return cargo;
+	}
+	public Date getFechaPosecion() {
+		return fechaPosecion;
 	}
 
 	@Override

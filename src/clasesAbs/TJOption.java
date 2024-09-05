@@ -197,6 +197,18 @@ public class TJOption {
 		String res =(String)JOptionPane.showInputDialog(null,"Carreras","Selecciona una carrera: ",JOptionPane.QUESTION_MESSAGE,null,valores,valores[0]);
 		return(res);
 	}
+
+	public static String desplegaCargoDirec() {
+		String valores[]={"Director","sub-Director","Gerente","Asociado"};
+		String res =(String)JOptionPane.showInputDialog(null,"Cargos","Selecciona una cargo directivo: ",JOptionPane.QUESTION_MESSAGE,null,valores,valores[0]);
+		return(res);
+	}
+
+	public static String desplegaTipoAsociado() {
+		String valores[]={"Directivo","Natural"};
+		String res =(String)JOptionPane.showInputDialog(null,"Asociados","Selecciona una tipode asociado: ",JOptionPane.QUESTION_MESSAGE,null,valores,valores[0]);
+		return(res);
+	}
 	public static String leeDato() {
         return JOptionPane.showInputDialog("Ingrese la posicion:");
     }
