@@ -11,8 +11,8 @@ public class A_Directivo extends Asociado{
 		// TODO Auto-generated constructor stub
 	}
 
-	public A_Directivo(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado, String cargo, Date fechaPosecion) {
-		super(numeroSocio, nombre, fechaIngreso,  numeroTelefono,  tipoAsociado);
+	public A_Directivo(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String cargo, Date fechaPosecion) {
+		super(numeroSocio, nombre, fechaIngreso,  numeroTelefono);
 		// TODO Auto-generated constructor stub
 		this.cargo=cargo;
 		this.fechaPosecion=fechaPosecion;
@@ -32,6 +32,6 @@ public class A_Directivo extends Asociado{
 
 	@Override
 	public String toString() {
-		return super.toString() + ", Cargo: " + cargo + ", Fecha: " + fechaPosecion;
+		return super.toString() + ", Cargo en la mesa directiva: " + cargo + ", Fecha: " + fechaPosecion;
 	}
 }

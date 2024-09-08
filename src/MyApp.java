@@ -16,14 +16,13 @@ public class MyApp {
 
     public void agregarAsociadoDirectivo() {
         A_Directivo asociado = new A_Directivo();
-        asociado.setNumeroSocio(TJOption.leerInt("Numero Socio"));
         asociado.setNombre(TJOption.leerString("Ingresa el nombre"));
         asociado.setFechaIngreso(new Date());
         asociado.setNumeroTelefono(TJOption.leerInt("Numero Telefono"));
 
         String cargo;
         do {
-            cargo = TJOption.leerString("Cargo");
+            cargo = TJOption.leerString("Cargo en la mesa directiva");
             if (!esCargoDisponible(cargo)) {
                 TJOption.imprimePantalla("El cargo ya está ocupado. Por favor, elija otro cargo.");
             }
