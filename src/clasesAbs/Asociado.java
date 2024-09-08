@@ -12,7 +12,7 @@ public class Asociado {
 
     }
 
-    public Asociado(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado) {
+    public Asociado(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono) {
         this.numeroSocio = numeroSocio;
         this.nombre = nombre;
         this.fechaIngreso = fechaIngreso;
