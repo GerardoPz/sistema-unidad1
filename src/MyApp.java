@@ -71,6 +71,19 @@ public class MyApp {
         TJOption.imprimePantalla("Asociado natural agregado con éxito.");
     }
 
+    public void aportacionesANaturales(){
+        int numSocio = (TJOption.leerInt("Ingrese su numero de socio"));
+        for(A_Natural asociado : naturales){
+            if(asociado.getNumeroSocio() == numSocio){
+                float nvAportacion = (TJOption.leerInt("Ingrese el monto de su aportación"));
+                asociado.setAportacion(asociado.getAportacion() + nvAportacion);
+                asociado.setCantAport(asociado.getCantAport() + 1);
+                asociado.setFecUltimaAport(new Date());
+            }
+        }
+        TJOption.imprimePantalla("Aportacion registrada con éxito.");
+    }
+
     public String imprimirNatural() {
         StringBuilder sb = new StringBuilder("Listado de Asociados Naturales:\n");
         for (A_Natural natural : naturales) {

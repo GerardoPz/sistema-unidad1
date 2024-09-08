@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Main {
     // COMENTARIO PRUEBA
-    static String[] opciones = {"Agregar asociado directivo", "Agregar asociado natural", "Imprimir Lista Asociados Directivos", "Imprimir Lista Asociados Naturales", "SALIR"};
+    static String[] opciones = {"Agregar asociado directivo", "Agregar asociado natural", "Aportaciones de asociados naturales", "Imprimir Lista Asociados Directivos", "Imprimir Lista Asociados Naturales", "SALIR"};
 
 
 
@@ -24,6 +24,9 @@ public class Main {
                 case "Agregar asociado natural":
                     app.agregarAsociadoNatural();
                     break;
+                case "Aportaciones de asociados naturales":
+                    app.aportacionesANaturales();
+                    break;    
                 case "Imprimir Lista Asociados Naturales":
                     String listaNaturales = app.imprimirNatural();  // Obtener la lista de naturales
                     TJOption.imprimePantalla(listaNaturales);
