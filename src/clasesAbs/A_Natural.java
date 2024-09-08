@@ -12,7 +12,7 @@ public class A_Natural extends Asociado{
 	}
 	public A_Natural(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, 
 			String tipoAsociado, float aportacion, int cantAport, Date fecUltimaAport) {
-		super(numeroSocio, nombre, fechaIngreso, numeroTelefono, tipoAsociado);
+		super(numeroSocio, nombre, fechaIngreso, numeroTelefono);
         this.aportacion = aportacion;
         this.cantAport = cantAport;
         this.fecUltimaAport = fecUltimaAport;        
@@ -35,5 +35,15 @@ public class A_Natural extends Asociado{
 	}
 	public void setFecUltimaAport(Date val) {
 		this.fecUltimaAport = val;
+	}
+
+	public float totalAportaciones(){
+		return aportacion;
+	}
+
+	@Override
+	public String toString(){
+		return super.toString() +"\nTotal en aportaciones: " + totalAportaciones() + "\nCantidad de aportaciones: " + cantAport +
+		"\nFecha de la ultima aportación: " + fecUltimaAport;
 	}
 }

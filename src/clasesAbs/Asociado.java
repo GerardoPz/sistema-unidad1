@@ -7,18 +7,16 @@ public class Asociado {
     private String nombre;
     private Date fechaIngreso;
     private int numeroTelefono;
-    private String tipoAsociado;
 
     public Asociado() {
 
     }
 
-    public Asociado(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado) {
+    public Asociado(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono) {
         this.numeroSocio = numeroSocio;
         this.nombre = nombre;
         this.fechaIngreso = fechaIngreso;
         this.numeroTelefono = numeroTelefono;
-        this.tipoAsociado = tipoAsociado;
     }
 
     public int getNumeroSocio() {
@@ -53,14 +51,6 @@ public class Asociado {
         this.numeroTelefono = numeroTelefono;
     }
 
-    public String getTipoAsociado() {
-        return tipoAsociado;
-    }
-
-    public void setTipoAsociado(String tipoAsociado) {
-        this.tipoAsociado = tipoAsociado;
-    }
-
     @Override
     public String toString() {
         return "Asociado{" +
@@ -68,7 +58,6 @@ public class Asociado {
                 ", nombre='" + nombre + '\'' +
                 ", fechaIngreso=" + fechaIngreso +
                 ", numeroTelefono=" + numeroTelefono +
-                ", tipoAsociado='" + tipoAsociado + '\'' +
                 '}';
     }
 }

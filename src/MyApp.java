@@ -1,9 +1,7 @@
 import clasesAbs.A_Directivo;
 import clasesAbs.A_Natural;
-import clasesAbs.Asociado;
 import clasesAbs.TJOption;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -22,7 +20,6 @@ public class MyApp {
         asociado.setNombre(TJOption.leerString("Ingresa el nombre"));
         asociado.setFechaIngreso(new Date());
         asociado.setNumeroTelefono(TJOption.leerInt("Numero Telefono"));
-        asociado.setTipoAsociado(TJOption.leerString("Tipo Asociado"));
 
         String cargo;
         do {
@@ -62,10 +59,15 @@ public class MyApp {
         asociado.setNombre(TJOption.leerString("Ingresa el nombre"));
         asociado.setFechaIngreso(new Date());
         asociado.setNumeroTelefono(TJOption.leerInt("Numero Telefono"));
-        asociado.setTipoAsociado(TJOption.leerString("Tipo Asociado"));
-        asociado.setCantAport(TJOption.leerInt("Monto de Aportaciones"));
+        int i = 0;
+        do{
+            asociado.setAportacion(TJOption.leerInt("Ingrese el monto de su primer aportación"));
+            if(asociado.getAportacion() < 2500){
+                TJOption.imprimePantalla("Su primer aportación debe ser de al menos $2500");
+            }
+        } while (asociado.getAportacion() < 2500);
+        asociado.setCantAport(i+1);
         asociado.setFecUltimaAport(new Date());
-
         naturales.add(asociado);  // Agrega el asociado natural a la lista
         TJOption.imprimePantalla("Asociado natural agregado con éxito.");
     }

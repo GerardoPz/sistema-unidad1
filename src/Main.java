@@ -1,5 +1,3 @@
-import clasesAbs.A_Directivo;
-import clasesAbs.Asociado;
 import clasesAbs.TJOption;
 
 import javax.swing.*;
