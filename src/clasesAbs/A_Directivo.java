@@ -22,14 +22,11 @@ public class A_Directivo extends Asociado{
 	}
 	
 	public void setFechaPosecion(Date fechaPosecion) {
-		fechaPosecion = fechaPosecion;
+		this.fechaPosecion = fechaPosecion;
 	}
 
 	public String getCargo(){
 		return cargo;
-	}
-	public Date getFechaPosecion() {
-		return fechaPosecion;
 	}
 
 	@Override
