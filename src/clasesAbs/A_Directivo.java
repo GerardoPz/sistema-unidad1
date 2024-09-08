@@ -10,6 +10,7 @@ public class A_Directivo extends Asociado{
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public A_Directivo(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String tipoAsociado, String cargo, Date fechaPosecion) {
 		super(numeroSocio, nombre, fechaIngreso,  numeroTelefono,  tipoAsociado);
 		// TODO Auto-generated constructor stub
