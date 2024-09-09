@@ -43,7 +43,8 @@ public class A_Natural extends Asociado{
 
 	@Override
 	public String toString(){
-		return super.toString() +"\nTotal en aportaciones: " + totalAportaciones() + "\nCantidad de aportaciones: " + cantAport +
+		return super.toString() +"\nTotal en aportaciones: " + totalAportaciones() +
+		"\nCantidad de aportaciones: " + cantAport +
 		"\nFecha de la ultima aportación: " + fecUltimaAport;
 	}
 }
