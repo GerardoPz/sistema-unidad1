@@ -3,17 +3,19 @@ package clasesAbs;
 import java.util.Date;
 
 public class Asociado {
+    private static int contadosSocios = 0;
     private int numeroSocio;
     private String nombre;
     private Date fechaIngreso;
-    private int numeroTelefono;
+    private String numeroTelefono;
 
     public Asociado() {
 
     }
 
-    public Asociado(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono) {
-        this.numeroSocio = numeroSocio;
+    public Asociado(String nombre, Date fechaIngreso, String numeroTelefono) {
+        contadosSocios ++;
+        this.numeroSocio = contadosSocios;
         this.nombre = nombre;
         this.fechaIngreso = fechaIngreso;
         this.numeroTelefono = numeroTelefono;
@@ -23,8 +25,9 @@ public class Asociado {
         return numeroSocio;
     }
 
-    public void setNumeroSocio(int numeroSocio) {
-        this.numeroSocio = numeroSocio;
+    public void setNumeroSocio() {
+        contadosSocios ++;
+        this.numeroSocio = contadosSocios;
     }
 
     public String getNombre() {
@@ -43,21 +46,16 @@ public class Asociado {
         this.fechaIngreso = fechaIngreso;
     }
 
-    public int getNumeroTelefono() {
+    public String getNumeroTelefono() {
         return numeroTelefono;
     }
 
-    public void setNumeroTelefono(int numeroTelefono) {
+    public void setNumeroTelefono(String numeroTelefono) {
         this.numeroTelefono = numeroTelefono;
     }
 
     @Override
     public String toString() {
-        return "Asociado{" +
-                "numeroSocio=" + numeroSocio +
-                ", nombre='" + nombre + '\'' +
-                ", fechaIngreso=" + fechaIngreso +
-                ", numeroTelefono=" + numeroTelefono +
-                '}';
+        return "Asociado: "+"Numero De Socio=" + numeroSocio + ", nombre = " + nombre + '\'' + ", fechaIngreso = " + fechaIngreso + ", numeroTelefono = " + numeroTelefono;
     }
 }

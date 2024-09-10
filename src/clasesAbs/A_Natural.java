@@ -10,9 +10,8 @@ public class A_Natural extends Asociado{
 	public A_Natural() {
 		super();
 	}
-	public A_Natural(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, 
-			String tipoAsociado, float aportacion, int cantAport, Date fecUltimaAport) {
-		super(numeroSocio, nombre, fechaIngreso, numeroTelefono);
+	public A_Natural(String nombre, Date fechaIngreso, String numeroTelefono, String tipoAsociado, float aportacion, int cantAport, Date fecUltimaAport) {
+		super(nombre, fechaIngreso, numeroTelefono);
         this.aportacion = aportacion;
         this.cantAport = cantAport;
         this.fecUltimaAport = fecUltimaAport;        

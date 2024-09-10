@@ -1,6 +1,4 @@
-import clasesAbs.A_Directivo;
-import clasesAbs.A_Natural;
-import clasesAbs.TJOption;
+import clasesAbs.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,13 +12,43 @@ public class MyApp {
         naturales = new ArrayList<>();
     }
 
+    public void agregarPrueba() {
+        Prueba asociado = new Prueba("aTRIBUTO", 12, "asa", new Date(), "d");
+        System.out.println(asociado.getNumeroSocio());
+    }
+
+    public static String formatearTelefono(String numero) {
+        numero = numero.replaceAll("\\D+", "");
+
+
+
+        String codigoPais = "+52";
+        String parte1 = numero.substring(0, 3);  // Primeros 3 dígitos
+        String parte2 = numero.substring(3, 6);  // Siguientes 3 dígitos
+        String parte3 = numero.substring(6);     // Últimos 4 dígitos
+
+        return String.format("%s %s %s %s", codigoPais, parte1, parte2, parte3);
+    }
+
+
     public void agregarAsociadoDirectivo() {
         A_Directivo asociado = new A_Directivo();
+        asociado.setNumeroSocio();
         asociado.setNombre(TJOption.leerString("Ingresa el nombre"));
         asociado.setFechaIngreso(new Date());
-        asociado.setNumeroTelefono(TJOption.leerInt("Numero Telefono"));
+        String numeroTelefonico;
+        boolean esNumeroValido = false;
 
+        do {
+            numeroTelefonico = TJOption.leerString("Ingresa un numero telefonico 10 digitos");
+            if (numeroTelefonico.matches("\\d{10}")) {
+                esNumeroValido = true;
+            }
+        } while (!esNumeroValido);
+
+        asociado.setNumeroTelefono(formatearTelefono(numeroTelefonico));
         String cargo;
+
         do {
             cargo = TJOption.leerString("Cargo en la mesa directiva");
             if (!esCargoDisponible(cargo)) {
@@ -54,10 +82,22 @@ public class MyApp {
 
     public void agregarAsociadoNatural() {
         A_Natural asociado = new A_Natural();
-        asociado.setNumeroSocio(TJOption.leerInt("Numero Socio"));
+        asociado.setNumeroSocio();
         asociado.setNombre(TJOption.leerString("Ingresa el nombre"));
         asociado.setFechaIngreso(new Date());
-        asociado.setNumeroTelefono(TJOption.leerInt("Numero Telefono"));
+
+        String numeroTelefonico;
+        boolean esNumeroValido = false;
+
+        do {
+            numeroTelefonico = TJOption.leerString("Ingresa un numero telefonico 10 digitos");
+            if (numeroTelefonico.matches("\\d{10}")) {
+                esNumeroValido = true;
+            }
+        } while (!esNumeroValido);
+
+        asociado.setNumeroTelefono(formatearTelefono(numeroTelefonico));
+
         int i = 0;
         do{
             asociado.setAportacion(TJOption.leerInt("Ingrese el monto de su primer aportación"));
