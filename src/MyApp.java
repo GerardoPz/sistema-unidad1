@@ -12,11 +12,6 @@ public class MyApp {
         naturales = new ArrayList<>();
     }
 
-    public void agregarPrueba() {
-        Prueba asociado = new Prueba("aTRIBUTO", 12, "asa", new Date(), "d");
-        System.out.println(asociado.getNumeroSocio());
-    }
-
     public static String formatearTelefono(String numero) {
         numero = numero.replaceAll("\\D+", "");
 
