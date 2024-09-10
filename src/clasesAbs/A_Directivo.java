@@ -3,16 +3,17 @@ package clasesAbs;
 import java.util.Date;
 
 public class A_Directivo extends Asociado{
+	private static int contadosSocios = 0;
 	private String cargo;
 	private Date fechaPosecion;
-	
+
 	public A_Directivo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public A_Directivo(int numeroSocio, String nombre, Date fechaIngreso, int numeroTelefono, String cargo, Date fechaPosecion) {
-		super(numeroSocio, nombre, fechaIngreso,  numeroTelefono);
+	public A_Directivo(String nombre, Date fechaIngreso, String numeroTelefono, String cargo, Date fechaPosecion) {
+		super(nombre, fechaIngreso,  numeroTelefono);
 		// TODO Auto-generated constructor stub
 		this.cargo=cargo;
 		this.fechaPosecion=fechaPosecion;
@@ -21,7 +22,7 @@ public class A_Directivo extends Asociado{
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
-	
+
 	public void setFechaPosecion(Date fechaPosecion) {
 		this.fechaPosecion = fechaPosecion;
 	}
