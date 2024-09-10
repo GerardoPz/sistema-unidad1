@@ -20,8 +20,6 @@ public class MyApp {
     public static String formatearTelefono(String numero) {
         numero = numero.replaceAll("\\D+", "");
 
-
-
         String codigoPais = "+52";
         String parte1 = numero.substring(0, 3);  // Primeros 3 dígitos
         String parte2 = numero.substring(3, 6);  // Siguientes 3 dígitos
